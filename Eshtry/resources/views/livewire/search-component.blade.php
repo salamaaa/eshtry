@@ -2,7 +2,7 @@
     <div class="container">
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="#" class="link">home</a></li>
+                <li class="item-link"><a href="/" class="link">home</a></li>
                 <li class="item-link"><span>Digital & Electronics</span></li>
             </ul>
         </div>
@@ -77,10 +77,9 @@
                                 </div>
                             </li>
                         @empty
-                            <h4 style="padding-top: 30px">No Products Found</h4>
+                            <h4 style="padding-top: 30px">No Products Found!</h4>
                         @endforelse
                     </ul>
-
                 </div>
 
                 <div class="wrap-pagination-info">
@@ -95,7 +94,8 @@
                         <ul class="list-category">
                             @foreach($categories as $category)
                                 <li class="category-item">
-                                    <a href="{{route('product.category',$category->slug)}}" class="cate-link">{{$category->name}}</a>
+                                    <a href="{{route('product.category',$category->slug)}}"
+                                       class="cate-link">{{$category->name}}</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -177,7 +177,7 @@
                             <li class="product-item">
                                 <div class="product product-widget-style">
                                     <div class="thumbnail">
-                                        <a href="{{route('product.details',$product->slug)}}"
+                                        <a href="#"
                                            title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
                                             <figure><img src="{{asset('assets/images/products/digital_01.jpg')}}"
                                                          alt=""></figure>
@@ -193,7 +193,7 @@
                             <li class="product-item">
                                 <div class="product product-widget-style">
                                     <div class="thumbnail">
-                                        <a href="{{route('product.details',$product->slug)}}"
+                                        <a href="#"
                                            title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
                                             <figure><img src="{{asset('assets/images/products/digital_17.jpg')}}"
                                                          alt=""></figure>
@@ -209,7 +209,7 @@
                             <li class="product-item">
                                 <div class="product product-widget-style">
                                     <div class="thumbnail">
-                                        <a href="{{route('product.details',$product->slug)}}"
+                                        <a href="#"
                                            title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
                                             <figure><img src="{{asset('assets/images/products/digital_18.jpg')}}"
                                                          alt=""></figure>
@@ -225,7 +225,7 @@
                             <li class="product-item">
                                 <div class="product product-widget-style">
                                     <div class="thumbnail">
-                                        <a href="{{route('product.details',$product->slug)}}"
+                                        <a href="#"
                                            title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
                                             <figure><img src="{{asset('assets/images/products/digital_20.jpg')}}"
                                                          alt=""></figure>

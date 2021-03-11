@@ -2,8 +2,10 @@
     <div class="container">
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="#" class="link">home</a></li>
-                <li class="item-link"><span>Digital & Electronics</span></li>
+                <li class="item-link"><a href="/" class="link">home</a></li>
+                <li class="item-link"><span>Product Categories</span></li>
+                <li class="item-link"><a href="{{route('product.category',$category->slug)}}"
+                                         class="link">{{$category->name}}</a></li>
             </ul>
         </div>
         <div class="row">
@@ -18,7 +20,7 @@
 
                 <div class="wrap-shop-control">
 
-                    <h1 class="shop-title">Digital & Electronics</h1>
+                    <h1 class="shop-title">{{$category->name}}</h1>
 
                     <div class="wrap-right">
 
@@ -77,7 +79,7 @@
                                 </div>
                             </li>
                         @empty
-                            <h4 style="padding-top: 30px">No Products Found</h4>
+                            <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">No Products Found</li>
                         @endforelse
                     </ul>
 
