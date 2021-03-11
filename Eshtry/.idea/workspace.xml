@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminCategoryComponent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-category-component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminAddCategoryComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-category-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-category-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-category-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +201,7 @@
       <workItem from="1615296072243" duration="13208000" />
       <workItem from="1615330831370" duration="2328000" />
       <workItem from="1615379346839" duration="5478000" />
-      <workItem from="1615463463804" duration="16675000" />
+      <workItem from="1615463463804" duration="19152000" />
     </task>
     <servers />
   </component>
