@@ -5,53 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/CategoryComponent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/HeaderSearchComponent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/SearchComponent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_09_140850_create_products_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_09_141107_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/digital_9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/category-component.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/details-component.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/header-search-component.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/search-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Eshtry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Eshtry.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminCategoryComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-category-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ShopComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ShopComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/author-avata.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/author-avatar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/digital_09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/shop-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/shop-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +201,7 @@
       <workItem from="1615296072243" duration="13208000" />
       <workItem from="1615330831370" duration="2328000" />
       <workItem from="1615379346839" duration="5478000" />
-      <workItem from="1615463463804" duration="14183000" />
+      <workItem from="1615463463804" duration="16675000" />
     </task>
     <servers />
   </component>
