@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use Illuminate\Support\Facades\Route;
@@ -32,9 +33,9 @@ Route::get('/shop', ShopComponent::class)
     ->name('shop');
 Route::get('/product/{slug}', DetailsComponent::class)
     ->name('product.details');
-Route::get('/product-category/{category_slug}',CategoryComponent::class)
+Route::get('/product-category/{category_slug}', CategoryComponent::class)
     ->name('product.category');
-Route::get('/search',SearchComponent::class)
+Route::get('/search', SearchComponent::class)
     ->name('product.search');
 Route::middleware('auth')->group(function () {
     Route::get('/cart', CartComponent::class)
@@ -65,4 +66,6 @@ Route::middleware(['auth:sanctum', 'verified', 'auth.admin'])->group(function ()
         ->name('admin.category.edit');
     Route::get('/admin/products', AdminProductComponent::class)
         ->name('admin.products');
+    Route::get('/admin/product/add', AdminAddProductComponent::class)
+        ->name('admin.product.add');
 });
