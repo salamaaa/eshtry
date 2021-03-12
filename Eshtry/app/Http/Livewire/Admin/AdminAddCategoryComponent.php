@@ -20,7 +20,6 @@ class AdminAddCategoryComponent extends Component
         $cat->save();
         session()->flash('message','Category Successfully Added!');
         return redirect()->route('admin.categories');
-
     }
     public function render()
     {

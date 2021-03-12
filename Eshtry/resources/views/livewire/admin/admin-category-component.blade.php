@@ -37,7 +37,14 @@
                                     <td>{{$category->id}}</td>
                                     <td>{{$category->name}}</td>
                                     <td>{{$category->slug}}</td>
-                                    <td></td>
+                                    <td><a href="{{route('admin.category.edit',$category->slug)}}">
+                                            <i class="fa fa-edit fa-2x"></i>
+                                        </a>
+                                    </td>
+                                    <td><a href="#" wire:click.prevent="deleteCategory({{$category->id}})">
+                                            <i class="fa fa-trash-o fa-2x text-red-600"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
