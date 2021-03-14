@@ -5,13 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/M0cbgTPMZ5iP048OXAzYQ1ifHBWqCL-metacGl4bWEtdHM3NDQwLXBhcGVyLXRyeS1vdXQtYmstZnJhXzgwMHg2NTktNjg0M2RhOWUtZmZiNC0xMWVhLTlmZTgtYjA4M2ZlYTAwZmFjLnBuZw==-.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/products/1615582245.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/AdminAddHomesliderComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/AdminEditHomesliderComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/AdminEditProductComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/AdminHomesliderComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Homeslider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_14_122428_create_homesliders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/O4lz5kqielhusPCLwhs9YcG5sEzj3U-metacG93M3JfcHJvX2NvbGxlY3Rpb25fNTAweDUwMC5qcGc=-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/ORely9lOPKRs2jfwwhDDlebwLPYxPI-metacG93M3JfcHJvX2NvbGxlY3Rpb25fNTAweDUwMC5qcGc=-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/W08yicP74pGy9BGaJfsjGKPlzGHCKq-metaNDFmZjRhMDM3NS5qcGc=-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/dP8cVQISDb5Eo9H5qmlDk0dwaSOrTK-metac2xpZGVyLmpwZw==-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/wCPCLK9r18IlEnpWwmdgWLLB3idLoW-metac2xpZGVyLmpwZw==-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/livewire-tmp/xuXJWpdyLQkxq8ycovzsUY2wIHVWtC-metac2xpZGVyMi5qcGc=-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/1615648349.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/1615728624.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/1615728930.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/1615730713.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sliders/1615734419.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin-add-homeslider-component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin-edit-homeslider-component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin-edit-product-component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin-homeslider-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminAddProductComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminAddProductComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminProductComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/HomeComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/HomeComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/livewire-tmp/M0cbgTPMZ5iP048OXAzYQ1ifHBWqCL-metacGl4bWEtdHM3NDQwLXBhcGVyLXRyeS1vdXQtYmstZnJhXzgwMHg2NTktNjg0M2RhOWUtZmZiNC0xMWVhLTlmZTgtYjA4M2ZlYTAwZmFjLnBuZw==-.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-product-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-product-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-category-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-category-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-product-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/home-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/home-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,6 +229,8 @@
       <workItem from="1615379346839" duration="5478000" />
       <workItem from="1615463463804" duration="19549000" />
       <workItem from="1615563394650" duration="11539000" />
+      <workItem from="1615645877304" duration="8211000" />
+      <workItem from="1615722482226" duration="10042000" />
     </task>
     <servers />
   </component>

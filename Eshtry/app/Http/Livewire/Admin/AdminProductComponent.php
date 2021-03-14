@@ -8,6 +8,12 @@ use Livewire\WithPagination;
 class AdminProductComponent extends Component
 {
     use WithPagination;
+
+    public function deleteProduct($id){
+        Product::destroy($id);
+        session()->flash('message','Product Deleted Successfully!');
+    }
+
     public function render()
     {
         $products = Product::paginate(10);

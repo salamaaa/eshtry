@@ -110,6 +110,10 @@
                                                        href="{{route('admin.products')}}">Products</a>
                                                 </li>
                                                 <li class="menu-item">
+                                                    <a title="Manage Home Slider"
+                                                       href="{{route('admin.homeslider')}}">Manage Home Slider</a>
+                                                </li>
+                                                <li class="menu-item">
                                                     <a title="Logout"
                                                        href="{{route('logout')}}"
                                                        onclick="event.preventDefault();

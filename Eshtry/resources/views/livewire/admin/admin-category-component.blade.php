@@ -38,11 +38,11 @@
                                     <td>{{$category->name}}</td>
                                     <td>{{$category->slug}}</td>
                                     <td><a href="{{route('admin.category.edit',$category->slug)}}">
-                                            <i class="fa fa-edit fa-2x"></i>
+                                            <i class="fa fa-edit fa-2x text-info"></i>
                                         </a>
                                     </td>
                                     <td><a href="#" wire:click.prevent="deleteCategory({{$category->id}})">
-                                            <i class="fa fa-trash-o fa-2x text-red-600"></i>
+                                            <i class="fa fa-trash-o fa-2x text-danger"></i>
                                         </a>
                                     </td>
                                 </tr>

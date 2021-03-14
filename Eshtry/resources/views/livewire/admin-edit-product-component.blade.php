@@ -5,7 +5,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-md-6">Add Product</div>
+                            <div class="col-md-6">Edit Product</div>
                             <div class="col-md-6">
                                 <a href="{{route('admin.products')}}"
                                    class="btn btn-success pull-right">
@@ -19,7 +19,7 @@
                             <div class="alert alert-success"
                                  role="alert">{{\Illuminate\Support\Facades\Session::get('message')}}</div>
                         @endif
-                        <form wire:submit.prevent="storeProduct()"
+                        <form wire:submit.prevent="updateProduct()"
                               class="form-horizontal"
                               enctype="multipart/form-data">
                             <div class="form-group">
@@ -98,7 +98,7 @@
                             <div class="form-group">
                                 <label for="stock"
                                        class="col-md-4 control-label">
-                                    Stock Status
+                                    Sale Price
                                 </label>
                                 <div class="col-md-4">
                                     <select name="stock" id="stock" wire:model="stock_status">
@@ -138,11 +138,15 @@
                                 </label>
                                 <div class="col-md-4">
                                     <input type="file"
-                                           wire:model="image"
+                                           wire:model="newImage"
                                            id="image"
                                            class="input-file">
-                                    @if($image)
-                                        <img src="{{$image->temporaryUrl()}}"
+                                    @if($newImage)
+                                        <img src="{{$newImage->temporaryUrl()}}"
+                                             alt="product image"
+                                             width="100">
+                                    @else
+                                        <img src="{{asset('assets/images/products/'.$image)}}"
                                              alt="product image"
                                              width="100">
                                     @endif
@@ -169,7 +173,7 @@
                                 <div class="col-md-4">
                                     <button class="btn btn-primary "
                                             type="submit">
-                                        Submit
+                                        Edit
                                     </button>
                                 </div>
                             </div>

@@ -21,6 +21,9 @@
                         </div>
                     </div>
                     <div class="panel-body">
+                        @if(\Illuminate\Support\Facades\Session::has('message'))
+                            <div class="alert alert-success">{{\Illuminate\Support\Facades\Session::get('message6')}}</div>
+                        @endif
                         <table class="table table-striped">
                             <thead>
                             <tr>
@@ -48,8 +51,8 @@
                                     <td>{{$product->stock_status}}</td>
                                     <td>{{$product->regular_price}}</td>
                                     <td>{{$product->created_at->diffForHumans()}}</td>
-                                    <td><a href="#"><i class="fa-edit fa-2x"></i></a></td>
-                                    <td><a href="#"><i class="fa-trash-o fa-2x text-red-600"></i></a></td>
+                                    <td><a href="{{route('admin.product.edit',$product->slug)}}"><i class="fa fa-edit fa-2x text-info"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-trash-o fa-2x text-danger" wire:click.prevent="deleteProduct({{$product->id}})"></i></a></td>
                                 </tr>
                             @empty
                                 <tr>
