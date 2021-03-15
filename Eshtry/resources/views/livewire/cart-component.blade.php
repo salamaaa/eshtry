@@ -29,8 +29,17 @@
                                     <a class="link-to-product"
                                        href="{{route('product.details',$item->model->slug)}}">{{$item->model->name}}</a>
                                 </div>
-                                <div class="price-field product-price"><p class="price">
-                                        ${{$item->model->regular_price}}</p></div>
+                                <div class="price-field product-price">
+                                    @if($item->model->sale_price > 0)
+                                        <p class="price">
+                                            ${{$item->model->sale_price}}
+                                        </p>
+                                    @else
+                                        <p class="price">
+                                            ${{$item->model->regular_price}}
+                                        </p>
+                                    @endif
+                                </div>
                                 <div class="quantity">
                                     <div class="quantity-input">
                                         <input type="text" name="product-quantity" value="{{$item->qty}}"
@@ -43,7 +52,8 @@
                                            wire:click.prevent="decreaseQty('{{$item->rowId}}')"></a>
                                     </div>
                                 </div>
-                                <div class="price-field sub-total"><p class="price">${{$item->subtotal}}</p></div>
+                                <div class="price-field sub-total">
+                                    <p class="price">${{$item->subtotal}}</p></div>
                                 <div class="delete">
                                     <a href="#"
                                        class="btn btn-delete"

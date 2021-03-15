@@ -36,9 +36,16 @@
                             <a class="link-socail" href="#"><img src="{{asset('assets/images/social-list.png')}}"
                                                                  alt="social-list"></a>
                         </div>
-                        <div class="wrap-price">
-                            <span class="product-price">${{$product->regular_price}}</span>
-                        </div>
+                        @if($product->sale_price > 0 && $sale->status == 1 && $sale->sale_date > \Illuminate\Support\Carbon::now())
+                            <div class="wrap-price">
+                                <ins><p class="product-price">${{$product->sale_price}}</p></ins>
+                                <del><p class="product-price">${{$product->regular_price}}</p></del>
+                            </div>
+                        @else
+                            <div class="wrap-price">
+                                <span class="product-price">${{$product->regular_price}}</span>
+                            </div>
+                        @endif
                         <div class="stock-info in-stock">
                             <p class="availability">Availability:
                                 <b>@if($product->stock_status == 'instock') In Stock @else Out of Stock @endif</b></p>
@@ -57,12 +64,22 @@
                             </div>
                         </div>
                         <div class="wrap-buttons">
-                            <a href="#"
-                               class="btn add-to-cart"
-                               wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
-                                Add to Cart
-                            </a>
+                            @if($sale->status == 1 && $sale->sale_date > \Illuminate\Support\Carbon::now())
+                                <a href="#"
+                                   class="btn add-to-cart"
+                                   wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">
+                                    Add to Cart
+                                </a>
+                            @else
+                                <a href="#"
+                                   class="btn add-to-cart"
+                                   wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
+                                    Add to Cart
+                                </a>
+                            @endif
+
                             <div class="wrap-btn">
+
                                 <a href="#" class="btn btn-compare">Add Compare</a>
                                 <a href="#" class="btn btn-wishlist">Add Wishlist</a>
                             </div>

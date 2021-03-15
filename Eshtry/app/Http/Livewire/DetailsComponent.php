@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Product;
+use App\Models\Sale;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
 
@@ -33,10 +34,12 @@ class DetailsComponent extends Component
             ->inRandomOrder()
             ->limit(5)
             ->get();
+        $sale = Sale::find(1);
         return view('livewire.details-component', [
             'product' => $product,
             'popular_products' => $popular_products,
-            'related_products' => $related_products
+            'related_products' => $related_products,
+            'sale'=>$sale
         ])->layout('layouts.base');
     }
 }

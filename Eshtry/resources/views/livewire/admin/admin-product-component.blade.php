@@ -33,6 +33,7 @@
                                 <th>Category</th>
                                 <th>Stock</th>
                                 <th>Price</th>
+                                <th>Sale Price</th>
                                 <th>Date</th>
                                 <th rowspan="2">Action</th>
                             </tr>
@@ -50,6 +51,7 @@
                                     <td>{{$product->category->name}}</td>
                                     <td>{{$product->stock_status}}</td>
                                     <td>{{$product->regular_price}}</td>
+                                    <td>{{$product->sale_price}}</td>
                                     <td>{{$product->created_at->diffForHumans()}}</td>
                                     <td><a href="{{route('admin.product.edit',$product->slug)}}"><i class="fa fa-edit fa-2x text-info"></i></a></td>
                                     <td><a href="#"><i class="fa fa-trash-o fa-2x text-danger" wire:click.prevent="deleteProduct({{$product->id}})"></i></a></td>
