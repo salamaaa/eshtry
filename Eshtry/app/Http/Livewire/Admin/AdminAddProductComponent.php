@@ -24,14 +24,32 @@ class AdminAddProductComponent extends Component
     public $image;
     public $category_id;
 
-    public function mount(){
+    protected $rules = ['name' => 'required|string|unique:products',
+//        'slug' => 'required|unique:products',
+        'short_description' => 'required',
+        'description' => 'required',
+        'price' => 'required|numeric',
+        'sale_price' => 'required|numeric',
+        'quantity' => 'required|numeric',
+        'featured' => 'required',
+        'stock_status' => 'required',
+        'image' => 'required|image',
+        'category_id' => 'required'];
+
+    public function mount()
+    {
         $this->featured = 0;
         $this->stock_status = 'instock';
     }
-    public function generateSlug(){
+
+    public function generateSlug()
+    {
         $this->slug = Str::slug($this->name);
     }
-    public function storeProduct(){
+
+    public function storeProduct()
+    {
+        $this->validate();
         $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
@@ -44,18 +62,19 @@ class AdminAddProductComponent extends Component
         $product->short_description = $this->short_description;
         $product->description = $this->description;
 
-        $imageName = time().'.'.$this->image->extension();
-        $this->image->storeAs('products',$imageName);
+        $imageName = time() . '.' . $this->image->extension();
+        $this->image->storeAs('products', $imageName);
         $product->image = $imageName;
 
         $product->save();
-        session()->flash('message','Product Added Successfully!');
+        session()->flash('message', 'Product Added Successfully!');
         return redirect()->route('admin.products');
     }
+
     public function render()
     {
         $categories = Category::all();
-        return view('livewire.admin.admin-add-product-component',['categories'=>$categories])
+        return view('livewire.admin.admin-add-product-component', ['categories' => $categories])
             ->layout('layouts.base');
     }
 }

@@ -13,6 +13,12 @@ class AdminEditCategoryComponent extends Component
     public $slug;
     public $name;
 
+    protected $rules = [
+        'name' => 'required|string|unique:categories',
+//        'slug' => 'required|unique:categories',
+    ];
+
+
     public function mount($slug){
         $this->category_slug = $slug;
         $category = Category::where('slug',$slug)->first();
@@ -24,6 +30,7 @@ class AdminEditCategoryComponent extends Component
         $this->slug = Str::slug($this->name);
     }
     public function EditCategory(){
+        $this->validate();
         $category = Category::find($this->category_id);
         $category->name = $this->name;
         $category->slug= $this->slug;

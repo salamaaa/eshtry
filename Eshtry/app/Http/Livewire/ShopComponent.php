@@ -27,10 +27,17 @@ class ShopComponent extends Component
 
     public function store($product_id, $product_name, $product_price)
     {
-        Cart::add($product_id, $product_name, 1, $product_price)
+        Cart::instance('cart')
+            ->add($product_id, $product_name, 1, $product_price)
             ->associate(Product::class);
         session()->flash('success_message', 'Item added successfully');
         return redirect()->route('cart');
+    }
+
+    public function wish($product_id, $product_name, $product_price){
+        Cart::instance('wishlist')
+            ->add($product_id, $product_name, 1, $product_price)
+            ->associate(Product::class);
     }
 
     public function render()

@@ -30,6 +30,7 @@
                                            wire:model="title"
                                            id="title"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('title'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -42,6 +43,7 @@
                                            wire:model="subtitle"
                                            id="subtitle"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('subtitle'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -54,6 +56,7 @@
                                            wire:model="price"
                                            id="price"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('price'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -66,6 +69,7 @@
                                            wire:model="link"
                                            id="link"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('link'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -78,6 +82,7 @@
                                         <option value="1">In Stock</option>
                                         <option value="0">Out Of Stock</option>
                                     </select>
+                                    <span class="text-danger">@error('status'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -90,6 +95,7 @@
                                            wire:model="image"
                                            id="image"
                                            class="input-file">
+                                    <span class="text-danger">@error('image'){{ $message }} @enderror</span>
                                     @if($image)
                                         <img src="{{$image->temporaryUrl()}}"
                                              alt="slider image"

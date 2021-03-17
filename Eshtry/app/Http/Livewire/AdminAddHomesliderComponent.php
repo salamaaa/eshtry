@@ -15,12 +15,19 @@ class AdminAddHomesliderComponent extends Component
     public $image;
     public $link;
 
+    protected $rules = ['title'=>'required|string|unique:homesliders',
+        'subtitle'=>'required|string',
+        'price'=>'required|numeric',
+        'status'=>'required',
+        'link'=>'required|url'];
+
     public function mount(){
         $this->status = 0;
     }
 
     public function storeSlider()
     {
+        $this->validate();
         $slider = new Homeslider();
         $slider->title = $this->title;
         $slider->subtitle = $this->subtitle;

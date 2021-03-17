@@ -52,7 +52,7 @@
                                     <td>{{$slider->link}}</td>
                                     <td>{{$slider->created_at->diffForHumans()}}</td>
                                     <td><a href="{{route('admin.homeslider.edit',$slider->id)}}"><i class="fa fa-edit fa-2x text-info"></i></a></td>
-                                    <td><a href="" wire:click.prevent="deleteSlider({{$slider->id}})"><i class="fa fa-trash-o fa-2x text-danger"></i></a></td>
+                                    <td><a href="" onclick="window.confirm('Confirm Deleting this Record') || event.stopImmediatePropagation()" wire:click.prevent="deleteSlider({{$slider->id}})"><i class="fa fa-trash-o fa-2x text-danger"></i></a></td>
                                 </tr>
                             @empty
                                 <tr>

@@ -27,6 +27,17 @@ class AdminEditProductComponent extends Component
     public $newImage;
     public $product_id;
 
+    protected $rules = ['name' => 'required|string|unique:products',
+//        'slug' => 'required|unique:products',
+        'short_description' => 'required',
+        'description' => 'required',
+        'price' => 'required|numeric',
+        'sale_price' => 'required|numeric',
+        'quantity' => 'required|numeric',
+        'featured' => 'required',
+        'stock_status' => 'required',
+        'image' => 'required|image'];
+
     public function mount($slug)
     {
         $product = Product::where('slug', $slug)->first();
@@ -51,6 +62,7 @@ class AdminEditProductComponent extends Component
 
     public function updateProduct()
     {
+        $this->validate();
         $product = Product::find($this->product_id);
 
         $product->name = $this->name;

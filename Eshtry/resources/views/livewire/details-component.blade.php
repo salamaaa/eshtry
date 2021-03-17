@@ -30,7 +30,7 @@
                         </div>
                         <h2 class="product-name">{{$product->name}}</h2>
                         <div class="short-desc">
-                            <p>{{$product->short_description}}</p>
+                            <p>{!! $product->short_description !!}</p>
                         </div>
                         <div class="wrap-social">
                             <a class="link-socail" href="#"><img src="{{asset('assets/images/social-list.png')}}"
@@ -93,7 +93,7 @@
                         </div>
                         <div class="tab-contents">
                             <div class="tab-content-item active" id="description">
-                                <p>{{$product->description}}</p>
+                                <p>{!! $product->description !!}</p>
                             </div>
                             <div class="tab-content-item " id="add_information">
                                 <table class="shop_attributes">

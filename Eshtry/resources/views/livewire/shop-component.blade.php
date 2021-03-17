@@ -6,6 +6,7 @@
                 <li class="item-link"><span>Digital & Electronics</span></li>
             </ul>
         </div>
+
         <div class="row">
 
             <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
@@ -49,8 +50,34 @@
                     </div>
                 </div>
 
+                <style>
+                    .product-wish {
+                        position: absolute;
+                        top: 10%;
+                        left: 0;
+                        right: 30px;
+                        z-index: 99;
+                        text-align: right;
+                        padding-top: 0;
+                    }
+
+                    .product-wish .fa {
+                        color: #cbcbcb;
+                        font-size: 32px;
+                    }
+
+                    .product-wish .fa:hover {
+                        color: #ff0000;
+                    }
+                    .fill-heart{
+                        color: #ff0000 !important;
+                    }
+                </style>
                 <div class="row">
                     <ul class="product-list grid-products equal-container">
+                        @php
+                            $wishItems = Cart::instance('wishlist')->content()->pluck('id');
+                        @endphp
                         @forelse($products as $product)
                             <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
                                 <div class="product product-style-3 equal-elem ">
@@ -66,7 +93,7 @@
                                     <div class=" product-info">
                                         <a href="{{route('product.details',$product->slug)}}"
                                            class="product-name"><span>{{$product->name}}</span></a>
-                                        @if($product->sale_price)
+                                        @if($product->sale_price > 0)
                                             <div class="wrap-price">
                                                 <ins><p class="product-price">${{$product->sale_price}}</p></ins>
                                                 <del><p class="product-price">${{$product->regular_price}}</p></del>
@@ -81,6 +108,16 @@
                                            wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
                                             Add To Cart
                                         </a>
+                                        <div class="product-wish">
+                                            @if($wishItems->contains($product->id))
+                                                <a href=""><i class="fa fa-heart fill-heart"></i></a>
+                                            @else
+                                                <a href=""
+                                                   wire:click.prevent="wish({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -267,9 +304,9 @@
                 density: 4
             }
         });
-        slider.noUiSlider.on('update',function (value){
-            @this.set('min_price',value[0]);
-            @this.set('max_price',value[1]);
+        slider.noUiSlider.on('update', function (value) {
+        @this.set('min_price', value[0]);
+        @this.set('max_price', value[1]);
         });
     </script>
 @endpush

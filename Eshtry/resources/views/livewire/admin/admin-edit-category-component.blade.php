@@ -33,9 +33,11 @@
                                            wire:keyup="generateSlug()"
                                            id="categoryName"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('name'){{$message}} @enderror</span>
                                 </div>
                             </div>
-                            <div class="form-group">
+
+                            {{--<div class="form-group">
                                 <label for="categorySlug"
                                        class="col-md-4 control-label">
                                     Category Slug
@@ -45,8 +47,9 @@
                                            wire:model="slug"
                                            id="categorySlug"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('slug'){{$message}} @enderror</span>
                                 </div>
-                            </div>
+                            </div>--}}
                             <div class="form-group">
                                 <label for="categorySlug" class="col-md-4 control-label"></label>
                                 <div class="col-md-4">

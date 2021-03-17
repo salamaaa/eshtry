@@ -19,6 +19,11 @@ class AdminEditHomesliderComponent extends Component
     public $newImage;
     public $slider_id;
 
+    protected $rules = ['title'=>'required|string|unique:homesliders',
+        'subtitle'=>'required|string',
+        'price'=>'required|numeric',
+        'status'=>'required',
+        'link'=>'required|url'];
 
     public function mount($id){
         $slider = Homeslider::find($id);
@@ -32,6 +37,7 @@ class AdminEditHomesliderComponent extends Component
     }
 
     public function updateSlider(){
+        $this->validate();
         $slider = Homeslider::find($this->slider_id);
         $slider->title = $this->title;
         $slider->subtitle = $this->subtitle;

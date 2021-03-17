@@ -54,7 +54,7 @@
                                     <td>{{$product->sale_price}}</td>
                                     <td>{{$product->created_at->diffForHumans()}}</td>
                                     <td><a href="{{route('admin.product.edit',$product->slug)}}"><i class="fa fa-edit fa-2x text-info"></i></a></td>
-                                    <td><a href="#"><i class="fa fa-trash-o fa-2x text-danger" wire:click.prevent="deleteProduct({{$product->id}})"></i></a></td>
+                                    <td><a href="#" onclick="window.confirm('Confirm Deleting this Record') || event.stopImmediatePropagation()"><i class="fa fa-trash-o fa-2x text-danger" wire:click.prevent="deleteProduct({{$product->id}})"></i></a></td>
                                 </tr>
                             @empty
                                 <tr>

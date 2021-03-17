@@ -33,9 +33,10 @@
                                            wire:keyup="generateSlug()"
                                            id="productName"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('name'){{ $message }} @enderror</span>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            {{--<div class="form-group">
                                 <label for="productSlug"
                                        class="col-md-4 control-label">
                                     Product Slug
@@ -45,30 +46,33 @@
                                            wire:model="slug"
                                            id="productSlug"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('slug'){{ $message }} @enderror</span>
                                 </div>
-                            </div>
+                            </div>--}}
                             <div class="form-group">
-                                <label for="shortDesc"
+                                <label for="short_description"
                                        class="col-md-4 control-label">
                                     Short Description
                                 </label>
-                                <div class="col-md-4">
+                                <div class="col-md-4" wire:ignore>
                                     <textarea type="text"
                                               wire:model="short_description"
-                                              id="shortDesc"
-                                              class="form-control input-md"></textarea>
+                                              class="form-control input-md"
+                                              id="short_description"></textarea>
+                                    <span class="text-danger">@error('short_description'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="Desc"
+                                <label for="description"
                                        class="col-md-4 control-label">
                                     Description
                                 </label>
-                                <div class="col-md-4">
+                                <div class="col-md-4" wire:ignore>
                                     <textarea type="text"
                                               wire:model="description"
-                                              id="Desc"
+                                              id="description"
                                               class="form-control input-md"></textarea>
+                                    <span class="text-danger">@error('description'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -81,6 +85,8 @@
                                            wire:model="price"
                                            id="price"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('price'){{ $message }} @enderror</span>
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -93,6 +99,8 @@
                                            wire:model="sale_price"
                                            id="salePrice"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('sale_price'){{ $message }} @enderror</span>
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -105,6 +113,7 @@
                                         <option value="instock">In Stock</option>
                                         <option value="outofstock">Out Of Stock</option>
                                     </select>
+                                    <span class="text-danger">@error('stock_status'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -117,6 +126,7 @@
                                         <option value="0">No</option>
                                         <option value="1">Yes</option>
                                     </select>
+                                    <span class="text-danger">@error('featured'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -129,6 +139,7 @@
                                            wire:model="quantity"
                                            id="quantity"
                                            class="form-control input-md">
+                                    <span class="text-danger">@error('quantity'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -141,6 +152,7 @@
                                            wire:model="image"
                                            id="image"
                                            class="input-file">
+                                    <span class="text-danger">@error('image'){{ $message }} @enderror</span>
                                     @if($image)
                                         <img src="{{$image->temporaryUrl()}}"
                                              alt="product image"
@@ -162,6 +174,7 @@
                                             <option value="">No Categories Found</option>
                                         @endforelse
                                     </select>
+                                    <span class="text-danger">@error('category_id'){{ $message }} @enderror</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -180,3 +193,29 @@
         </div>
     </div>
 </div>
+@push('scripts')
+    <script>
+        $(function () {
+            tinymce.init({
+                selector: '#short_description',
+                setup: function (editor) {
+                    editor.on('change', function (e) {
+                        tinyMCE.triggerSave();
+                        sd_data = $('#short_description').val();
+                    @this.set('short_description', sd_data);
+                    });
+                }
+            });
+            tinymce.init({
+                selector: '#description',
+                setup: function (editor) {
+                    editor.on('change', function (e) {
+                        tinyMCE.triggerSave();
+                        d_data = $('#description').val();
+                    @this.set('description', d_data);
+                    });
+                }
+            });
+        });
+    </script>
+@endpush
