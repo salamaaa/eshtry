@@ -69,7 +69,8 @@
                     .product-wish .fa:hover {
                         color: #ff0000;
                     }
-                    .fill-heart{
+
+                    .fill-heart {
                         color: #ff0000 !important;
                     }
                 </style>
@@ -110,7 +111,10 @@
                                         </a>
                                         <div class="product-wish">
                                             @if($wishItems->contains($product->id))
-                                                <a href=""><i class="fa fa-heart fill-heart"></i></a>
+                                                <a href=""
+                                                   wire:click.prevent="deleteFromWishList({{$product->id}})">
+                                                    <i class="fa fa-heart fill-heart"></i>
+                                                </a>
                                             @else
                                                 <a href=""
                                                    wire:click.prevent="wish({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">

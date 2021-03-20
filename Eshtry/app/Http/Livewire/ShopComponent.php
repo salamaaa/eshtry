@@ -41,6 +41,16 @@ class ShopComponent extends Component
         $this->emitTo('wishlist-count-component','refreshComponent');  //fire refresh event when adding to wishlist
     }
 
+    public function deleteFromWishList($product_id){
+        foreach (Cart::instance('wishlist')->content() as $witem){
+            if ($witem->id == $product_id){
+                Cart::instance('wishlist')->remove($witem->rowId);
+                $this->emitTo('wishlist-count-component','refreshComponent');
+                return;
+            }
+        }
+    }
+
     public function render()
     {
         if ($this->sorting == 'date') {
