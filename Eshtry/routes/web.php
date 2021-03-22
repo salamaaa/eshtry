@@ -9,6 +9,7 @@ use App\Http\Livewire\AdminEditHomesliderComponent;
 use App\Http\Livewire\AdminEditProductComponent;
 use App\Http\Livewire\AdminHomeCategoryComponent;
 use App\Http\Livewire\AdminHomesliderComponent;
+use App\Http\Livewire\WishlistComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
@@ -48,6 +49,8 @@ Route::middleware('auth')->group(function () {
         ->name('cart');
     Route::get('checkout', CheckoutComponent::class)
         ->name('checkout');
+    Route::get('wishlist', WishlistComponent::class)
+        ->name('wishlist');
 });
 
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

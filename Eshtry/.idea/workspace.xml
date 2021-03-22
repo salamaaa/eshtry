@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/WishlistComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/wishlist-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ShopComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ShopComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/shop-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/shop-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/wishlist-count-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/wishlist-count-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +210,8 @@
       <workItem from="1615904048569" duration="7083000" />
       <workItem from="1615980423675" duration="13803000" />
       <workItem from="1616071049742" duration="2876000" />
-      <workItem from="1616275806387" duration="245000" />
+      <workItem from="1616275806387" duration="880000" />
+      <workItem from="1616419584162" duration="1597000" />
     </task>
     <servers />
   </component>
