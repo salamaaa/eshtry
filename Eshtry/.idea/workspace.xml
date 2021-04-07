@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/WishlistComponent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/wishlist-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/wishlist-count-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/wishlist-count-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/WishlistComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/WishlistComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/details-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/details-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/wishlist-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/wishlist-component.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -170,7 +179,7 @@
     <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -211,7 +220,10 @@
       <workItem from="1615980423675" duration="13803000" />
       <workItem from="1616071049742" duration="2876000" />
       <workItem from="1616275806387" duration="880000" />
-      <workItem from="1616419584162" duration="1597000" />
+      <workItem from="1616419584162" duration="2241000" />
+      <workItem from="1617800989626" duration="1333000" />
+      <workItem from="1617802491655" duration="632000" />
+      <workItem from="1617803356016" duration="1760000" />
     </task>
     <servers />
   </component>
@@ -232,5 +244,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

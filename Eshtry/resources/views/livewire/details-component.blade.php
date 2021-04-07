@@ -3,7 +3,7 @@
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="/" class="link">home</a></li>
-                <li class="item-link"><span>detail</span></li>
+                <li class="item-link"><span>details</span></li>
             </ul>
         </div>
         <div class="row">
@@ -55,12 +55,13 @@
                             <div class="quantity-input">
                                 <input type="text"
                                        name="product-quantity"
-                                       value="{{$product->quantity}}"
+                                       value="1"
                                        data-max="120"
-                                       pattern="[0-9]*">
+                                       pattern="[0-9]*"
+                                       wire:model="qty">
 
-                                <a class="btn btn-reduce" href="#"></a>
-                                <a class="btn btn-increase" href="#"></a>
+                                <a class="btn btn-reduce" href="#" wire:click.prevent="decreaseQty()"></a>
+                                <a class="btn btn-increase" href="#" wire:click.prevent="increaseQty()"></a>
                             </div>
                         </div>
                         <div class="wrap-buttons">
@@ -81,7 +82,8 @@
                             <div class="wrap-btn">
 
                                 <a href="#" class="btn btn-compare">Add Compare</a>
-                                <a href="#" class="btn btn-wishlist">Add Wishlist</a>
+                                <a href="#" class="btn btn-wishlist"
+                                   wire:click.prevent="wish({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add Wishlist</a>
                             </div>
                         </div>
                     </div>

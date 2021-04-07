@@ -22,8 +22,10 @@
                         @foreach(Cart::instance('cart')->content() as $item)
                             <li class="pr-cart-item">
                                 <div class="product-image">
-                                    <figure><img src="{{asset('assets/images/products/'.$item->model->image)}}"
-                                                 alt="{{$item->model->name}}"></figure>
+                                    <a href="{{route('product.details',$item->model->slug)}}">
+                                        <figure><img src="{{asset('assets/images/products/'.$item->model->image)}}"
+                                                     alt="{{$item->model->name}}"></figure>
+                                    </a>
                                 </div>
                                 <div class="product-name">
                                     <a class="link-to-product"
