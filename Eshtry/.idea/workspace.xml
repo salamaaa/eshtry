@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/WishlistComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/WishlistComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/details-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/details-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/wishlist-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/wishlist-component.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +220,7 @@
       <workItem from="1616419584162" duration="2241000" />
       <workItem from="1617800989626" duration="1333000" />
       <workItem from="1617802491655" duration="632000" />
-      <workItem from="1617803356016" duration="1760000" />
+      <workItem from="1617803356016" duration="4077000" />
     </task>
     <servers />
   </component>

@@ -53,6 +53,12 @@
                                            href="#"
                                            wire:click.prevent="decreaseQty('{{$item->rowId}}')"></a>
                                     </div>
+                                    <div class="text-center">
+                                        <a href="#"
+                                           wire:click.prevent="saveForLater('{{$item->rowId}}')">
+                                            Save for Later
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="price-field sub-total">
                                     <p class="price">${{$item->subtotal}}</p></div>
@@ -103,6 +109,65 @@
                        wire:click.prevent="removeAllItems()">Clear Shopping Cart</a>
                     <a class="btn btn-update" href="#">Update Shopping Cart</a>
                 </div>
+            </div>
+
+            <div class="wrap-item-in-cart">
+                <h3 class="title-box" style="border-bottom: 1px solid;padding-bottom: 15px;">{{Cart::instance('save_for_later')->count()}} item(s) Saved For Later</h3>
+                @if(\Illuminate\Support\Facades\Session::has('success_message_later'))
+                    <div class="alert alert-success">
+                        <strong>{{\Illuminate\Support\Facades\Session::get('success_message_later')}}</strong>
+                    </div>
+                @endif
+
+                @if(Cart::instance('save_for_later')->count() > 0)
+                    <h3 class="box-title">Product Name</h3>
+                    <ul class="products-cart">
+                        @foreach(Cart::instance('save_for_later')->content() as $item)
+                            <li class="pr-cart-item">
+                                <div class="product-image">
+                                    <a href="{{route('product.details',$item->model->slug)}}">
+                                        <figure><img src="{{asset('assets/images/products/'.$item->model->image)}}"
+                                                     alt="{{$item->model->name}}"></figure>
+                                    </a>
+                                </div>
+                                <div class="product-name">
+                                    <a class="link-to-product"
+                                       href="{{route('product.details',$item->model->slug)}}">{{$item->model->name}}</a>
+                                </div>
+                                <div class="price-field product-price">
+                                    @if($item->model->sale_price > 0)
+                                        <p class="price">
+                                            ${{$item->model->sale_price}}
+                                        </p>
+                                    @else
+                                        <p class="price">
+                                            ${{$item->model->regular_price}}
+                                        </p>
+                                    @endif
+                                </div>
+                                <div class="quantity">
+                                    <div class="text-center">
+                                        <a href="#"
+                                           wire:click.prevent="moveToCart('{{$item->rowId}}')">
+                                            Move to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="delete">
+                                    <a href="#"
+                                       class="btn btn-delete"
+                                       title="remove {{$item->model->name}}"
+                                       wire:click.prevent="deleteFormSavedForLater('{{$item->rowId}}')">
+                                        <span>Delete from your Saved List</span>
+                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p class="font-bold text-xl">Saved for Later List is Empty!!</p>
+                @endif
             </div>
 
             <div class="wrap-show-advance-info-box style-1 box-in-site">
