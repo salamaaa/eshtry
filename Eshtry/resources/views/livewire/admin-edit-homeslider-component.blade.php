@@ -78,7 +78,7 @@
                                     Status
                                 </label>
                                 <div class="col-md-4">
-                                    <select name="status" id="status" wire:model="status">
+                                    <select name="status" id="status" wire:model="status" class="form-control">
                                         <option value="1">Active</option>
                                         <option value="0">InActive</option>
                                     </select>

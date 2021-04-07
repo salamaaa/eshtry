@@ -131,6 +131,10 @@
                                                        href="{{route('admin.sale')}}">Manage Sale</a>
                                                 </li>
                                                 <li class="menu-item">
+                                                    <a title="Manage Coupons"
+                                                       href="{{route('admin.coupons')}}">Manage Coupons</a>
+                                                </li>
+                                                <li class="menu-item">
                                                     <a title="Logout"
                                                        href="{{route('logout')}}"
                                                        onclick="event.preventDefault();

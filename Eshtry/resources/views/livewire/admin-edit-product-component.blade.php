@@ -107,7 +107,7 @@
                                     Sale Price
                                 </label>
                                 <div class="col-md-4">
-                                    <select name="stock" id="stock" wire:model="stock_status">
+                                    <select name="stock" id="stock" wire:model="stock_status" class="form-control">
                                         <option value="instock">In Stock</option>
                                         <option value="outofstock">Out Of Stock</option>
                                     </select>
@@ -120,7 +120,7 @@
                                     Featured
                                 </label>
                                 <div class="col-md-4">
-                                    <select name="featured" id="featured" wire:model="featured">
+                                    <select name="featured" id="featured" wire:model="featured" class="form-control">
                                         <option value="0">No</option>
                                         <option value="1">Yes</option>
                                     </select>
@@ -168,7 +168,7 @@
                                     Category
                                 </label>
                                 <div class="col-md-4">
-                                    <select name="category" id="category" wire:model="category_id">
+                                    <select name="category" id="category" wire:model="category_id" class="form-control">
                                         <option value="">Select Category</option>
                                         @forelse($categories as $category)
                                             <option value="{{$category->id}}">{{$category->name}}</option>

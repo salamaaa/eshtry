@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminAddCouponComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminCouponsComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminEditCouponComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Coupon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_07_160114_create_coupons_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-coupon-component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-coupons-component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-edit-coupon-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin-add-homeslider-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin-add-homeslider-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin-edit-homeslider-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin-edit-homeslider-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin-edit-product-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin-edit-product-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-product-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-product-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +233,7 @@
       <workItem from="1616419584162" duration="2241000" />
       <workItem from="1617800989626" duration="1333000" />
       <workItem from="1617802491655" duration="632000" />
-      <workItem from="1617803356016" duration="4077000" />
+      <workItem from="1617803356016" duration="10111000" />
     </task>
     <servers />
   </component>
