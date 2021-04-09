@@ -20,16 +20,19 @@ class DetailsComponent extends Component
 
     public function store($product_id, $product_name, $product_price)
     {
-        Cart::add($product_id, $product_name, $this->qty, $product_price)
+        Cart::instance('cart')
+            ->add($product_id, $product_name, $this->qty, $product_price)
             ->associate(Product::class);
         session()->flash('success_message', 'Item added to Cart');
         return redirect()->route('cart');
     }
-    public function wish($product_id, $product_name, $product_price){
+
+    public function wish($product_id, $product_name, $product_price)
+    {
         Cart::instance('wishlist')
             ->add($product_id, $product_name, 1, $product_price)
             ->associate(Product::class);
-        $this->emitTo('wishlist-count-component','refreshComponent');  //fire refresh event when adding to wishlist
+        $this->emitTo('wishlist-count-component', 'refreshComponent');  //fire refresh event when adding to wishlist
     }
 
     public function increaseQty()

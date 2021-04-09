@@ -41,13 +41,10 @@
                                 <tr>
                                     <td>{{$coupon->id}}</td>
                                     <td>{{$coupon->code}}</td>
-                                    @if($coupon->type == "fixed")
-                                        <td>{{$coupon->type}}$</td>
-                                    @else
-                                        <td>{{$coupon->type}}%</td>
-                                    @endif
-                                    <td>{{$coupon->value}}</td>
-                                    <td>{{$coupon->cart_value}}</td>
+                                    <td>{{$coupon->type}}</td>
+
+                                    <td>{{$coupon->value}}@if($coupon->type == 'fixed')$@else%@endif</td>
+                                    <td>{{$coupon->cart_value}}$</td>
                                     <td>{{$coupon->created_at->diffForHumans()}}</td>
                                     <td><a href="{{route('admin.coupon.edit',$coupon->id)}}"><i
                                                 class="fa fa-edit fa-2x text-info"></i></a></td>

@@ -13,6 +13,8 @@ use App\Http\Livewire\AdminEditProductComponent;
 use App\Http\Livewire\AdminHomeCategoryComponent;
 use App\Http\Livewire\AdminHomesliderComponent;
 use App\Http\Livewire\WishlistComponent;
+use App\Models\Coupon;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
@@ -98,4 +100,11 @@ Route::middleware(['auth:sanctum', 'verified', 'auth.admin'])->group(function ()
         ->name('admin.coupon.add');
     Route::get('/admin/coupon/{id}/edit', AdminEditCouponComponent::class)
         ->name('admin.coupon.edit');
+
+    Route::get('test', function () {
+        return Coupon::where('code','049gr')
+            ->where('cart_value', '<=',2100)
+            ->first();
+    });
+
 });

@@ -66,7 +66,7 @@
                                 <div class="col-md-4">
                                     <select name="type" id="type" wire:model="type" class="form-control">
                                         <option value="">Select</option>
-                                        <option value="static">Static</option>
+                                        <option value="fixed">Fixed</option>
                                         <option value="percent">Percent</option>
                                     </select>
                                     <span class="text-danger">@error('type'){{ $message }} @enderror</span>
