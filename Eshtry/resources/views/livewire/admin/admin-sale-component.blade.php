@@ -53,7 +53,7 @@
             })
                 .on('dp.change', function (ev) {
                     var data = $('#date').val();
-                    @this.set('sale_date',data)
+                    @this.set('sale_date',data);
                 });
         });
     </script>

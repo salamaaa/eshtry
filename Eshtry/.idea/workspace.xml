@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/cart.php" afterDir="false" />
+    <list default="true" id="2940589d-e0b8-481d-9955-f0f7c4b33b35" name="Default Changelist" comment="apply coupon functionality">
+      <change afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/OrderItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Shipping.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Transaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_09_180609_add_expiry_date_to_coupons_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_122035_create_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_123341_create_order_items_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_123615_create_shippings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_123836_create_transactions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminCouponsComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminCouponsComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminAddCouponComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminAddCouponComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminEditCouponComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/AdminEditCouponComponent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CartComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/DetailsComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-coupon-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-add-coupon-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-coupons-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-coupons-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-edit-coupon-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-edit-coupon-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/cart-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/admin-sale-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/admin-sale-component.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,8 +236,17 @@
       <workItem from="1617802491655" duration="632000" />
       <workItem from="1617803356016" duration="10921000" />
       <workItem from="1617882441598" duration="2932000" />
-      <workItem from="1617972609160" duration="9104000" />
+      <workItem from="1617972609160" duration="12283000" />
+      <workItem from="1618142480445" duration="4359000" />
     </task>
+    <task id="LOCAL-00001" summary="apply coupon functionality">
+      <created>1617990801054</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617990801055</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +266,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="apply coupon functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply coupon functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

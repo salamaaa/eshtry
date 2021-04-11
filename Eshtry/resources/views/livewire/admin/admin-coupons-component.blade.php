@@ -31,6 +31,7 @@
                                 <th>Value</th>
                                 <th>Cart Value</th>
                                 <th>Date</th>
+                                <th>Expiry Date</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
@@ -46,6 +47,7 @@
                                     <td>{{$coupon->value}}@if($coupon->type == 'fixed')$@else%@endif</td>
                                     <td>{{$coupon->cart_value}}$</td>
                                     <td>{{$coupon->created_at->diffForHumans()}}</td>
+                                    <td>{{$coupon->expiry_date}}</td>
                                     <td><a href="{{route('admin.coupon.edit',$coupon->id)}}"><i
                                                 class="fa fa-edit fa-2x text-info"></i></a></td>
                                     <td><a href=""

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Coupon;
 use App\Models\Product;
+use Carbon\Carbon;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
 
@@ -79,6 +80,7 @@ class CartComponent extends Component
     public function applyCouponCode()
     {
         $coupon = Coupon::where('code', $this->couponCode)
+            ->where('expiry_date','>=',Carbon::today())
             ->first();
         if (!$coupon) {
             session()->flash('coupon_message', 'Coupon is invalid');
