@@ -6,6 +6,7 @@ use App\Models\Coupon;
 use App\Models\Product;
 use Carbon\Carbon;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class CartComponent extends Component
@@ -80,7 +81,7 @@ class CartComponent extends Component
     public function applyCouponCode()
     {
         $coupon = Coupon::where('code', $this->couponCode)
-            ->where('expiry_date','>=',Carbon::today())
+            ->where('expiry_date', '>=', Carbon::today())
             ->first();
         if (!$coupon) {
             session()->flash('coupon_message', 'Coupon is invalid');
@@ -108,8 +109,39 @@ class CartComponent extends Component
         }
     }
 
-    public function removeCoupon(){
+    public function removeCoupon()
+    {
         session()->forget('coupon');
+    }
+
+    public function checkout()
+    {
+        if (Auth::check()) {
+            return redirect()->route('checkout');
+        } else {
+            return redirect()->route('login');
+        }
+    }
+
+    public function setAmountForCheckout(){
+        $cart = Cart::instance('cart');
+
+        if (session()->has('coupon')){
+            session()->put('checkout',[
+                'discount'=>$this->discount,
+                'subtotal'=>$this->subtotalAfterDiscount,
+                'tax'=>$this->taxAfterDiscount,
+                'total'=>$this->totalAfterDiscount
+            ]);
+        }else{
+
+            session()->put('checkout',[
+                'discount'=>0,
+                'subtotal'=>$cart->subtotal(),
+                'tax'=>$cart->tax(),
+                'total'=>$cart->total()
+            ]);
+        }
     }
 
     public function render()
@@ -121,6 +153,7 @@ class CartComponent extends Component
                 $this->calculateDiscount();
             }
         }
+        $this->setAmountForCheckout();
         return view('livewire.cart-component')->layout('layouts.base');
     }
 }
